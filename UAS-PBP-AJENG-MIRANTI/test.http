@@ -1,0 +1,98 @@
+
+###
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "ajengmiranti3",
+  "password" : "pw",
+  "name" : "Ajeng Miranti"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "ajengmiranti3",
+  "password" : "pw"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+{
+  "name" : "Ajeng Miranti33"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 69724597-8ad7-4b91-8934-75cc121eeb28
+
+###
+
+POST http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+{
+  "nama" : "Sarung Wadimor",
+  "deskripsi" : "Dengan bahan katun rayon nyaman berkualitas tinggi",
+  "harga" : "90000",
+  "stok" : "170",
+  "kategori": "Pakaian"
+}
+
+###
+
+GET http://localhost:3000/api/products
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+###
+
+GET http://localhost:3000/api/products/12
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+### Update
+
+PUT http://localhost:3000/api/products/12
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
+
+{
+  "nama" : "Ini digantiLAGIHHH",
+  "deskripsi" : "Baju dengan bahan katun rayon nyaman berkualitas lebar",
+  "harga" : "690040",
+  "stok" : "270",
+  "kategori": "celana"
+}
+
+### Delete Products
+
+DELETE http://localhost:3000/api/products/12
+Content-Type: application/json
+Accept: application/json
+Authorization: 05dd8fd6-923c-46e3-b934-446c09236e7e
